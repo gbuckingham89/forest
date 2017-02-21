@@ -1,6 +1,6 @@
 {
   "name": "gbuckingham89/forest",
-  "type": "library",
+  "type": "wordpress-plugin",
   "description": "STILL IN DEVELOPMENT - NOT READY FOR USE YET. A package for building WordPress themes. See the README file for more details.",
   "keywords": ["WordPress", "Timber", "Theme", "WordPress Theme", "PHP"],
   "homepage": "https://github.com/gbuckingham89/forest",
@@ -16,6 +16,9 @@
   "support": {
     "issues": "https://github.com/gbuckingham89/forest/issues",
     "source": "https://github.com/gbuckingham89/forest"
+  },
+  "require": {
+    "composer/installers": "1.2.0"
   },
   "autoload": {
     "psr-4": {
