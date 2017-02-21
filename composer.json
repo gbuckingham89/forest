@@ -1,0 +1,25 @@
+{
+  "name": "gbuckingham89/forest",
+  "type": "library",
+  "description": "STILL IN DEVELOPMENT - NOT READY FOR USE YET. A package for building WordPress themes. See the README file for more details.",
+  "keywords": ["WordPress", "Timber", "Theme", "WordPress Theme", "PHP"],
+  "homepage": "https://github.com/gbuckingham89/forest",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "George Buckingham",
+      "email": "george@georgebuckingham.com",
+      "homepage": "https://www.georgebuckingham.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/gbuckingham89/forest/issues",
+    "source": "https://github.com/gbuckingham89/forest"
+  },
+  "autoload": {
+    "psr-4": {
+      "Gbuckingham89\\Forest\\": "src/"
+    }
+  }
+}
