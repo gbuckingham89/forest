@@ -58,6 +58,9 @@ class Forest
 		$this->nav = new NavManager();
 		$this->timber = new TimberManager();
 
+		// Add stuff to timber context
+		add_filter( 'timber/context', [ $this, 'addToTimberContext' ] );
+
 		// Do some basic crap cleanup
 		$this->crapCleanup();
 	}
@@ -96,5 +99,16 @@ class Forest
 	{
 		$this->admin->bar->removeNodeComments();
 		$this->admin->menu->removePageComments();
+	}
+
+	/**
+	 * @param $context
+	 *
+	 * @return array
+	 */
+	public function addToTimberContext( $context )
+	{
+		$context['debug'] = ( defined( 'WP_DEBUG' ) ? WP_DEBUG : false );
+		return $context;
 	}
 }
