@@ -18,11 +18,6 @@ class Forest
 	public $assets;
 
 	/**
-	 * @var \Gbuckingham89\Forest\CustomizerManager
-	 */
-	public $customizer;
-
-	/**
 	 * @var \Gbuckingham89\Forest\EmojiManager
 	 */
 	public $emojis;
@@ -51,7 +46,6 @@ class Forest
 		$this->acf = new AcfManager();
 		$this->admin = new AdminManager();
 		$this->assets = new AssetManager();
-		$this->customizer = new CustomizerManager();
 		$this->emojis = new EmojiManager();
 		$this->excerpt = new ExcerptManager();
 		$this->images = new ImageManager();

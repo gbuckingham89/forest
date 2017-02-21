@@ -8,7 +8,6 @@ require_once( 'src/AdminDashboardManager.php' );
 require_once( 'src/AdminManager.php' );
 require_once( 'src/AdminMenuManager.php' );
 require_once( 'src/AssetManager.php' );
-require_once( 'src/CustomizerManager.php' );
 require_once( 'src/EmojiManager.php' );
 require_once( 'src/ExcerptManager.php' );
 require_once( 'src/ImageManager.php' );

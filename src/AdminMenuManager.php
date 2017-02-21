@@ -13,6 +13,11 @@ class AdminMenuManager
 	protected $pages_to_remove = [];
 
 	/**
+	 * @var array
+	 */
+	protected $subpages_to_remove = [];
+
+	/**
 	 * AdminMenuManager constructor.
 	 */
 	public function __construct()
@@ -30,6 +35,10 @@ class AdminMenuManager
 		foreach( array_unique( $this->pages_to_remove ) as $menu_slug )
 		{
 			remove_menu_page( $menu_slug );
+		}
+		foreach( array_unique( $this->subpages_to_remove ) as $subpage )
+		{
+			remove_submenu_page( $subpage[0], $subpage[1] );
 		}
 	}
 
@@ -58,4 +67,23 @@ class AdminMenuManager
 	{
 		$this->removePage( 'link-manager.php' );
 	}
+
+	/**
+	 * Register a sub page to be removed from the admin menu
+	 *
+	 * @param string $menu_slug
+	 */
+	public function removeSubPage( $menu_slug, $submenu_slug )
+	{
+		$this->subpages_to_remove[] = [ $menu_slug, $submenu_slug ];
+	}
+
+	/**
+	 * Remove the "Customise" sub menu page
+	 */
+	public function removeSubPageCustomize()
+	{
+		$this->removeSubPage( 'themes.php', 'customize.php?return=%2Fwp%2Fwp-admin%2Fthemes.php' );
+	}
+
 }
